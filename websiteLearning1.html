@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <title>HTML Learning First Doc</title>
 <html lang="en">
+    
     <head>
         <style>
             body {background-color: white;}
             h1  {
                 color: black;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-size: 300%;
                 text-align: center;
                 text-decoration: underline;
-
-
             }
             p {
                 border: 2px solid powderblue;
-                border-width: 2px 100px;
-                border-radius: 40px;
+                border-width: 2px 10px;
+                border-radius: 35px;
                 margin: 50px;
                 padding: 30px;
                 color: black;
-                font-family: courier;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-size: 160%;
                 text-align: center;
             }
+            button {
+                --color: #560bad;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: inline-block;
+                width: 8em;
+                height: 2.6em;
+                margin-top : 25px;
+                margin: 14px;
+                position: relative; left:80px; top:20px;
+                overflow: hidden;
+                border: 2px solid var(--color);
+                transition: color .5s;
+                z-index: 1;
+                font-size: 20px;
+                border-radius: 8px;
+                font-weight: 500;
+                color: var(--color);
+            }
+
+            button:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background: var(--color);
+                height: 150px;
+                width: 200px;
+                border-radius: 50%;
+                }
+
+                button:hover {
+                color: #fff;
+                }
+
+                button:before {
+                top: 100%;
+                left: 100%;
+                transition: all .7s;
+                }
+
+                button:hover:before {
+                top: -30px;
+                left: -30px;
+                }
+
+                button:active:before {
+                background: #3a0ca3;
+                transition: background 0s;
+                }
+            
         </style>
     </head>
     <body>
         <h1>This is the Heading</h1>
         <p>This is a paragraph, it is very special.</p>
         <p>This is a second paragraph</p>
+        <button>
+            <b>
+            First
+        </button> 
+        <button>
+            <b>
+            
+            Second
+            </b>
+        </button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
     </body>
 </html>
